@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+#degrees,
+#wind,
+#rain {
+    display: block;
+}
+
+button {
+    font-size: 20px;
+    -webkit-appearance: none;
+}
+
+#resultbutton button {
+    background-color: #00ABFC;
+    color: white;
+    border: none;
+    padding: 2px 20px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+#resultbutton button:hover {
+    background-color: white;
+    color: #00ABFC;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+#weather label {
+    display: block;
+}
+
+#weather input,
+#wButton {
+    font-size: 20px;
+    -webkit-appearance: none;
+}
+
+#wButton {
+    background: none;
+    border: none;
+}
+
+#search {
+    border: none;
+    background-color: transparent;
+}
+
+#search:focus {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+#submit {
+    padding: 3px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+i {
+    background: none;
+    border: none;
+    color: grey;
+    cursor: pointer;
+}
+
+#searchbar {
+    background-color: lightgray;
+    padding: 5px 20px;
+    max-width: 275px;
+    border-radius: 200px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+#clothingForm,
+#result,
+#weather {
+    float: left;
+    width: 25%;
+}

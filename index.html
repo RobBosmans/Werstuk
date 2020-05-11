@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What do I wear? Cycling</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/453259b44c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>What do I wear?</h1>
+    <section>
+        <form id="clothingForm">
+            <label id="degrees" class="weatherSelect">
+
+                <p>Degrees</p>
+                <div>
+                    <input type="radio" name="degrees" id="cold"
+                        value="- Thermal base layer <br>- Jersey <br>- Insulated jacket <br>- Long bibs <br>- Winter socks">
+                    <label for="cold"> >5°C</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="degrees" id="medium"
+                        value="- Jersey <br>- Insulated jacket <br>- Long bibs <br>- normal socks">
+                    <label for="medium"> 6°C - 14°C</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="degrees" id="hot" value="- Jersey <br>- Short bibs <br>- normal socks">
+                    <label for="hot"> 15°C and up</label>
+                </div>
+
+            </label>
+            <label id="wind">
+
+                <p>Wind</p>
+                <div>
+                    <input type="radio" name="wind" id="none" value="">
+                    <label for="none"> >1</label>
+                </div>
+                <div>
+                    <input type="radio" name="wind" id="less" value="- Packable wind jacket">
+                    <label for="less"> 2 - 3</label>
+                </div>
+                <div>
+                    <input type="radio" name="wind" id="more" value="- wind jacket">
+                    <label for="more"> 4 and up</label>
+                </div>
+
+            </label>
+            <label id="rain">
+
+                <p>Rain</p>
+                <div>
+                    <input type="radio" name="rain" id="yes" value="- rain vest">
+                    <label for="yes"> Yes</label>
+                </div>
+                <div>
+                    <input type="radio" name="rain" id="no" value="">
+                    <label for="no"> No</label>
+                </div>
+
+            </label>
+            <div id="resultbutton">
+                <button type="button" onclick="displayRadioValue()">RESULTS</button>
+            </div>
+        </form>
+        <div id="result">
+            <p>Recommended clothing:</p>
+            <div id="results1"></div>
+            <div id="results2"></div>
+            <div id="results3"></div>
+        </div>
+        <!-- <input type="text" id="results"> -->
+        <script>
+            function displayRadioValue() {
+
+                var radio1 = document.getElementsByName('degrees');
+                var radio2 = document.getElementsByName('wind');
+                var radio3 = document.getElementsByName('rain');
+
+                for (i = 0; i < radio1.length; i++) {
+                    if (radio1[i].checked)
+                        document.getElementById("results1").innerHTML = radio1[i].value;
+                }
+                for (i = 0; i < radio2.length; i++) {
+                    if (radio2[i].checked)
+                        document.getElementById("results2").innerHTML = radio2[i].value;
+                }
+                for (i = 0; i < radio3.length; i++) {
+                    if (radio3[i].checked)
+                        document.getElementById("results3").innerHTML = radio3[i].value;
+                }
+
+            }
+        </script>
+    </section>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script> -->
+    <section id="weather">
+        <script type="module" src="js/index.js"></script>
+        <h1>Weather</h1>
+        <form id="wform">
+            <label for="search">
+            </label>
+            <div id="searchbar">
+                <input type="search" id="search" placeholder="ex. Brussels">
+                <button type="submit" id="wButton"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <div id="weatherResult"></div>
+
+        <script type="module" src="js/weather.js"></script>
+    </section>
+</body>
+
+</html>
